@@ -24,7 +24,7 @@ type SomeStruct struct {
 
 We create some struct and set json tag for each because for parse struct we use json marshaling
 
-###Decode and encode without concurrency
+### Decode and encode without concurrency
 ```
 func EncodeAndDecode() {
 	someData := SomeStruct{
