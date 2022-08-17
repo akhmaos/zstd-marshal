@@ -1,0 +1,16 @@
+# IDE stuf
+.vscode
+
+# Env variables
+.env
+
+# Cassandra
+.cassandraWorkbench.jsonc
+.cassandraWorkbench
+
+.idea
+.run
+# Lint
+.golangci.yaml
+
+vendor/
