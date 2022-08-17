@@ -6,53 +6,53 @@ import (
 )
 
 // newZstdEncoder - for create encoder instance
-func newZstdEncoder() *ZstdEncoder {
+func newZstdEncoder() *zstdEncoder {
 	encoder, err := zstd.NewWriter(nil)
 
 	if err != nil {
 		panic(err)
 	}
 
-	return &ZstdEncoder{
+	return &zstdEncoder{
 		encoder,
 	}
 }
 
 // newZstdEncoderWithConcurrency - for create encoder instance with concurrency
-func newZstdEncoderWithConcurrency(encoderConcurrency int) *ZstdEncoder {
+func newZstdEncoderWithConcurrency(encoderConcurrency int) *zstdEncoder {
 	encoder, err := zstd.NewWriter(nil, zstd.WithEncoderConcurrency(encoderConcurrency))
 
 	if err != nil {
 		panic(err)
 	}
 
-	return &ZstdEncoder{
+	return &zstdEncoder{
 		encoder,
 	}
 }
 
 // newZstdDecoderWithConcurrency - for create decoder instance with concurrency
-func newZstdDecoderWithConcurrency(encoderConcurrency int) *ZstdDecoder {
+func newZstdDecoderWithConcurrency(encoderConcurrency int) *zstdDecoder {
 	decoder, err := zstd.NewReader(nil, zstd.WithDecoderConcurrency(runtime.GOMAXPROCS(encoderConcurrency)))
 
 	if err != nil {
 		panic(err)
 	}
 
-	return &ZstdDecoder{
+	return &zstdDecoder{
 		decoder,
 	}
 }
 
 // newZstdDecoder - for create decoder instance
-func newZstdDecoder() *ZstdDecoder {
+func newZstdDecoder() *zstdDecoder {
 	decoder, err := zstd.NewReader(nil)
 
 	if err != nil {
 		panic(err)
 	}
 
-	return &ZstdDecoder{
+	return &zstdDecoder{
 		decoder,
 	}
 }

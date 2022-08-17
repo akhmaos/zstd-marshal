@@ -5,7 +5,7 @@ import (
 	"github.com/klauspost/compress/zstd"
 )
 
-type ZstdEncoder struct {
+type zstdEncoder struct {
 	*zstd.Encoder
 }
 
