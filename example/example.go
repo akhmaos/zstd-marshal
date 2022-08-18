@@ -1,8 +1,8 @@
 package example
 
 import (
+	zstdM "github.com/akhmaos/zstd-marshal"
 	"runtime"
-	zstdM "zstd-marshal"
 )
 
 type SomeStruct struct {
